@@ -1,5 +1,7 @@
 # ChatGPT插件开发快速入门（Java版）
 
+[示例演示](example/README.md)
+
 用Java在5分钟内启动一个todo list ChatGPT插件。如果你还没有插件开发者权限：
 
 * 请[加入等待列表](https://openai.com/waitlist/plugins)
