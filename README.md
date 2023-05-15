@@ -1,7 +1,12 @@
 # ChatGPT plugins quick start in Java version
 
+[中文说明](/README_CN.md)
+
 Get a todo list ChatGPT plugin up and running in under 5 minutes using Java. If you do not already have plugin
-developer access, please [join the waitlist](https://openai.com/waitlist/plugins).
+developer access:
+
+* please [join the waitlist](https://openai.com/waitlist/plugins)
+* or become a Plus user, it is currently open to all Plus users
 
 ### Setup
 
