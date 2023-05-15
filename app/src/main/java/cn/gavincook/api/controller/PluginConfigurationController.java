@@ -1,5 +1,6 @@
 package cn.gavincook.api.controller;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
@@ -11,11 +12,14 @@ import java.io.InputStream;
 import java.util.Objects;
 
 /**
+ * This controller is used to serve the plugin configuration, no need export as openapi.
+ *
  * @author gavincook
  * @since 2023-05-15
  */
 @RestController
 @RequiredArgsConstructor
+@Hidden
 public class PluginConfigurationController {
 
     @GetMapping("/logo.png")
@@ -32,14 +36,6 @@ public class PluginConfigurationController {
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(new InputStreamResource(Objects.requireNonNull(pluginConfiguration)));
-    }
-
-    @GetMapping("/openapi.yaml")
-    public ResponseEntity<InputStreamResource> getOpenApi() {
-        InputStream openApi = getClass().getClassLoader().getResourceAsStream("openapi.yaml");
-        return ResponseEntity.ok()
-                .contentType(MediaType.valueOf("text/yaml"))
-                .body(new InputStreamResource(Objects.requireNonNull(openApi)));
     }
 
 }

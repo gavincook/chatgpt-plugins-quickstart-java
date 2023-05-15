@@ -1,0 +1,4 @@
+springdoc:
+  api-docs:
+    path: /openapi
+#    chatgpt plugin will get api definition from /openapi.yaml
