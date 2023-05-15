@@ -23,17 +23,19 @@ public class TodoPluginController {
     private final ToDoPluginApplicationService toDoPluginApplicationService;
 
     @PostMapping("/todos/{username}")
-    public void addTodo(@PathVariable String username, @RequestBody AddTodoRequest addTodoRequest) {
+    public void addTodo(@PathVariable("username") String username,
+                        @RequestBody AddTodoRequest addTodoRequest) {
         toDoPluginApplicationService.addToDo(username, addTodoRequest);
     }
 
     @GetMapping("/todos/{username}")
-    public TodosResponse getTodos(@PathVariable String username) {
+    public TodosResponse getTodos(@PathVariable("username") String username) {
         return toDoPluginApplicationService.getTodos(username);
     }
 
     @DeleteMapping("/todos/{username}")
-    public void deleteTodo(@PathVariable String username, @RequestBody DeleteTodoRequest deleteTodoRequest) {
+    public void deleteTodo(@PathVariable("username") String username,
+                           @RequestBody DeleteTodoRequest deleteTodoRequest) {
         toDoPluginApplicationService.deleteTodo(username, deleteTodoRequest);
     }
 }
