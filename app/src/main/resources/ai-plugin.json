@@ -1,18 +1,22 @@
 {
   "schema_version": "v1",
-  "name_for_human": "TODO Plugin (no auth)",
+  "name_for_human": "TODO Plugin (service_http)",
   "name_for_model": "todo",
   "description_for_human": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
   "description_for_model": "Plugin for managing a TODO list, you can add, remove and view your TODOs.",
   "auth": {
-    "type": "none"
+    "type": "service_http",
+    "authorization_type": "bearer",
+    "verification_tokens": {
+      "openai": "TODO: replace with your verify token"
+    }
   },
   "api": {
     "type": "openapi",
-    "url": "http://localhost:8080/v3/api-docs.yaml",
+    "url": "https://gpt-plugin.gavincook.cn/v3/api-docs.yaml",
     "is_user_authenticated": false
   },
-  "logo_url": "http://localhost:8080/logo.png",
+  "logo_url": "https://gpt-plugin.gavincook.cn/logo.png",
   "contact_email": "gavincook200@gmail.com",
   "legal_info_url": "https://github.com/gavincook/chatgpt-plugins-quickstart-java"
 }
