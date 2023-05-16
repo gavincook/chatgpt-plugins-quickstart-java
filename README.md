@@ -27,3 +27,19 @@ Once the local server is running:
 
 The plugin should now be installed and enabled! You can start with a question like "What is on my todo list" and then
 try adding something to it as well!
+
+### Authentication
+
+ChatGPT plugins support four authentication methods:
+
+* `None` :
+  No authentication required, Current example is using this method.
+* `Service level`:
+  Authentication is required for the whole service, you can set the authentication token in
+  the`application.yaml` file and verify token from openai plugin install ui in the `ai-plugin.json` file as shown in
+  [service level authentication example](https://github.com/gavincook/chatgpt-plugins-quickstart-java/tree/service_http_auth)
+  .
+* `User level`:
+  Authentication is required for each user, user can set the authentication token when install the plugin.
+* `OAuth`
+  Authentication is required for each user, user can use OAuth to get the authentication token when install the plugin.
