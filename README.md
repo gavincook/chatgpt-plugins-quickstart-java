@@ -33,11 +33,12 @@ try adding something to it as well!
 ChatGPT plugins support four authentication methods:
 
 * `None` :
-  No authentication required, Current example is using this method.
+  No authentication required as shown in
+  [no authentication example](https://github.com/gavincook/chatgpt-plugins-quickstart-java).
 * `Service level`:
   Authentication is required for the whole service, you can set the authentication token in
-  the`application.yaml` file and verify token from openai plugin install ui in the `ai-plugin.json` file as shown in
-  [service level authentication example](https://github.com/gavincook/chatgpt-plugins-quickstart-java/tree/service_http_auth)
+  the`application.yaml` file and verify token from openai plugin install ui in the `ai-plugin.json` file. Current
+  example is using this method.
   .
 * `User level`:
   Authentication is required for each user, user can set the authentication token when install the plugin.

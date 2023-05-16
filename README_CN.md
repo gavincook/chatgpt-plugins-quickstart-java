@@ -30,10 +30,9 @@
 ChatGPT插件支持四种认证方法：
 
 * `无认证` :
-  不需要认证，当前示例使用此方法。
+  不需要认证，当前示例使用此方法，具体参见：[无认证](https://github.com/gavincook/chatgpt-plugins-quickstart-java)。
 * `服务级别认证`:
-  服务级别认证，可以在`application.yaml`文件中设置认证令牌，并在`ai-plugin.json`文件中从openai插件安装ui中验证令牌，如
-  [服务级别认证示例](https://github.com/gavincook/chatgpt-plugins-quickstart-java/tree/service_http_auth)。
+  服务级别认证，可以在`application.yaml`文件中设置认证令牌，并在`ai-plugin.json`文件中从openai插件安装ui中验证令牌，当前示例使用此方法。
 * `用户级别令牌认证`:
   每个用户都需要认证，用户可以在安装插件时设置认证令牌。
 * `OAuth认证`
