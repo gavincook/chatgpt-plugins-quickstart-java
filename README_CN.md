@@ -24,3 +24,17 @@
 5. 输入`http://localhost:8080`，然后选择“Find manifest file”。
 
 插件现在已经安装并启用了！你可以从一个问题开始，比如“我的待办事项有哪些”，也可以尝试添加一些待办事项！
+
+### 认证
+
+ChatGPT插件支持四种认证方法：
+
+* `无认证` :
+  不需要认证，当前示例使用此方法。
+* `服务级别认证`:
+  服务级别认证，可以在`application.yaml`文件中设置认证令牌，并在`ai-plugin.json`文件中从openai插件安装ui中验证令牌，如
+  [服务级别认证示例](https://github.com/gavincook/chatgpt-plugins-quickstart-java/tree/service_http_auth)。
+* `用户级别令牌认证`:
+  每个用户都需要认证，用户可以在安装插件时设置认证令牌。
+* `OAuth认证`
+  每个用户都需要认证，用户可以在安装插件时使用OAuth获取认证令牌。
